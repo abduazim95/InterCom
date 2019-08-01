@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/destination_contacts"
+        android:title="Контакты"
+        android:icon="@drawable/ic_contacts"/>
+    <item
+        android:id="@+id/destination_messages"
+        android:title="Сообщения"
+        android:icon="@drawable/ic_messages"/>
+
+    <item
+            android:id="@+id/destination_settings"
+            android:title="Настройки"
+            android:icon="@drawable/ic_settings"/>
+</menu>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#303030"
+        app:theme="@style/ConversationTheme" android:orientation="vertical">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/colorPrimary"
+            android:paddingTop="30dp"
+            android:paddingBottom="15dp">
+
+        <TextView
+                android:text="Incoming call"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/type"
+                android:textSize="30dp"
+                android:gravity="center"
+                android:textColor="@android:color/white"/>
+        <TextView
+                android:text="Stephan Serebryakov"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/name"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:textColor="@android:color/white"/>
+        <TextView
+                android:text="+77011745316"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/phone"
+                android:textSize="30dp"
+                android:gravity="center"
+                android:textColor="@android:color/white"/>
+
+        <TextView
+                android:text="Connecting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView2"
+                android:textSize="15dp"
+                android:gravity="center_horizontal"
+                android:textColor="@android:color/white"
+                android:layout_gravity="center_horizontal"
+        />
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_above="@+id/toggles"
+            android:gravity="center_horizontal|center_vertical">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/floating_call_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:backgroundTint="#4cd964"
+                app:borderWidth="0dp"
+                app:srcCompat="@drawable/ic_call"/>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/floating_call_end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
+                    android:backgroundTint="#ff3b30"
+                    app:borderWidth="0dp"
+                    app:srcCompat="@drawable/ic_call_end"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/toggles"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorPrimary">
+
+        <ToggleButton
+                android:id="@+id/button_speakerphone"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/toggle_button_speakerphone"
+                android:checked="false"
+                android:textOn=""
+                android:textOff=""
+                android:layout_margin="50dp"/>
+
+        <ToggleButton
+                android:id="@+id/button_mic"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/toggle_button_mic"
+                android:checked="false"
+                android:layout_margin="50dp"
+                android:textOn=""
+                android:textOff=""/>
+
+    </LinearLayout>
+
+</RelativeLayout>

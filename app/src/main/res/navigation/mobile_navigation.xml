@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/destination_contacts">
+
+    <fragment
+        android:id="@+id/destination_contacts"
+        android:name="almaty.igd.ContactsFragment"
+        android:label="Контакты"
+        tools:layout="@layout/contacts_fragment"/>
+
+    <fragment
+        android:id="@+id/destination_messages"
+        android:name="almaty.igd.MessagesFragment"
+        android:label="Сообщения"
+        tools:layout="@layout/messages_fragment">
+        <action android:id="@+id/action_destination_messages_to_destination_chat"
+                app:destination="@id/destination_chat"/>
+    </fragment>
+    <activity
+        android:id="@+id/conversationActivity"
+        android:name="almaty.igd.ConversationActivity"
+        android:label="ConversationActivity">
+        <deepLink android:id="@+id/deepLink" app:uri="app://almaty.igd/call/{type}/{phone}"/>
+    </activity>
+
+    <fragment
+        android:id="@+id/destination_settings"
+        android:name="almaty.igd.BasicPreferencesFragment"
+        android:label="Настройки"/>
+    <fragment
+            android:id="@+id/destination_chat"
+            android:name="almaty.igd.ChatFragment"
+            android:label="Чат"
+            tools:layout="@layout/chat_fragment"/>
+
+</navigation>
