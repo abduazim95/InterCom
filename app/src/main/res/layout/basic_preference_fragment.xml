@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <PreferenceCategory
+            android:title="Уведомления"
+            android:key="pref_key_notification_settings">
+        <CheckBoxPreference
+                android:key="pref_key_notification"
+                android:summary="Отключить все уведомления"
+                android:title="Уведомление"
+                android:defaultValue="true"
+                android:disableDependentsState="true"/>
+        <CheckBoxPreference
+                android:key="pref_key_message_notification"
+                android:dependency="pref_key_notification"
+                android:summary="Уведомления о входящих сообщениях"
+                android:title="Сообщения"/>
+        <CheckBoxPreference
+                android:key="pref_key_call_notification"
+                android:dependency="pref_key_notification"
+                android:summary="Уведомления о входящих вызовах"
+                android:title="Вызовы"/>
+    </PreferenceCategory>
+</androidx.preference.PreferenceScreen>
